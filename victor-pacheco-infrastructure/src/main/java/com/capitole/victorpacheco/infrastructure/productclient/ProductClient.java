@@ -1,9 +1,9 @@
-package com.capitole.victorpacheco.infrastructure.httpclient;
+package com.capitole.victorpacheco.infrastructure.productclient;
 
 import feign.Param;
 import feign.RequestLine;
 
-public interface ProductHttpClient {
+public interface ProductClient {
     @RequestLine("GET /product/{productId}")
     DetailProductResponse findProductById(@Param("productId") Integer productId);
 

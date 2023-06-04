@@ -3,6 +3,7 @@ package com.capitole.victorpacheco.application.controller;
 import com.capitole.victorpacheco.application.mapper.ProductResponseMapper;
 import com.capitole.victorpacheco.application.response.ProductResponse;
 import com.capitole.victorpacheco.domain.service.ProductService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,8 +24,13 @@ public class ProductController {
     }
 
     @GetMapping("/{productId}/similar")
-    public List<ProductResponse> findSimilarProducts(@PathVariable Integer productId){
-        return productResponseMapper.productsToResponse(productService.findSimilarProductsById(productId));
+    public ResponseEntity<List<ProductResponse>> findSimilarProducts(@PathVariable Integer productId){
+        List<ProductResponse> similarProducts = productResponseMapper.productsToResponse(
+            productService.findSimilarProductsById(productId)
+        );
+        return similarProducts.isEmpty() ?
+            ResponseEntity.notFound().build() :
+            ResponseEntity.ok(similarProducts);
     }
 
 }

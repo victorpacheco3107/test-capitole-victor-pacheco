@@ -1,4 +1,4 @@
-package com.capitole.victorpacheco.infrastructure.httpclient;
+package com.capitole.victorpacheco.infrastructure.productclient;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
