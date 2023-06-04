@@ -26,7 +26,7 @@ public class ProductClientConfiguration {
 
     @Bean
     public ProductClient productHttpClient(HttpClientOptions httpClientOptions){
-
+        log.warn("Client options: {}", httpClientOptions);
         return Feign.builder()
             .client(new OkHttpClient())
             .encoder(new GsonEncoder())
