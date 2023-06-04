@@ -15,6 +15,6 @@ Para tener en cuenta:
 * Por cuestión de tiempo solo se le agregó javadoc y pruebas unitarias a la capa de dominio.
 * En el módulo launcher se encuentra la clase `VictorPachecoApplication` con la cual pueden iniciar la aplicación. En este módulo también se encuentra el archivo `application.properties` donde pueden modificar las propiedades de la aplicación.
 * Los detalles de los productos se consultan en paralelo, haciendo uso de un parallelStream, así:
-![Parallel Stream](https://github.com/victorpacheco3107/test-capitole-victor-pacheco/blob/b68391410935c9c493c9cb9639b728861ea68ce4/assets/parallelStream.png "")
-![Log Parallel](https://github.com/victorpacheco3107/test-capitole-victor-pacheco/blob/b68391410935c9c493c9cb9639b728861ea68ce4/assets/logParallel.png "")
+![Parallel Stream](https://github.com/victorpacheco3107/test-capitole-victor-pacheco-assets/blob/2636bec65aa4941b44a20276f96ddc7bd994f6b2/parallelStream.png "")
+![Log Parallel](https://github.com/victorpacheco3107/test-capitole-victor-pacheco-assets/blob/2636bec65aa4941b44a20276f96ddc7bd994f6b2/logParallel.png "")
 En las imágenes se puede ver que la consulta de los detalles de los productos se hace en paralelo, en diferentes hilos de ejecución. Esto se logra fácilmente haciendo uso de la programación funcional que nos ofrece java.
